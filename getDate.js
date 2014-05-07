@@ -3,17 +3,15 @@ var ProductDetails = {
     GetUploadedDate: (function(ela, elb, elc) {
         //Local vars
         var uploadedDate = new Date(ela, elb, elc);
-
         var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-
-        //var uploadMonth = uploadedDate.getMonth();
+        var uploadMonth = uploadedDate.getMonth();
 
 
         var fileDay = function() {
             return uploadedDate.getDate();
         };
 
-        var fileMonth = function() {
+        var fileMonth = function fileMonth() {
             return uploadedDate.getMonth() + 1;
         };
 
@@ -30,9 +28,8 @@ var ProductDetails = {
         return {
             getDay: fileDay,
             getMonth: fileMonth,
-            getYear: fileYear
+            getYear: fileYear,
+            getShortMonthName: getShortMonthName
         };
-
     })
-
 };
